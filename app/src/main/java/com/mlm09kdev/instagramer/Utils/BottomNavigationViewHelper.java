@@ -8,12 +8,12 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
-import com.mlm09kdev.instagramer.AlertActivity;
-import com.mlm09kdev.instagramer.HomeActivity;
-import com.mlm09kdev.instagramer.ProfileActivity;
+import com.mlm09kdev.instagramer.Alert.AlertActivity;
+import com.mlm09kdev.instagramer.Home.HomeActivity;
+import com.mlm09kdev.instagramer.Profile.ProfileActivity;
 import com.mlm09kdev.instagramer.R;
-import com.mlm09kdev.instagramer.SearchActivity;
-import com.mlm09kdev.instagramer.ShareActivity;
+import com.mlm09kdev.instagramer.Search.SearchActivity;
+import com.mlm09kdev.instagramer.Share.ShareActivity;
 
 /**
  * Created by Manuel Montes de Oca on 8/13/2018.

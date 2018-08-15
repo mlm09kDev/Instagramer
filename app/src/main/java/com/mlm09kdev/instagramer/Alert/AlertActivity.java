@@ -1,4 +1,4 @@
-package com.mlm09kdev.instagramer;
+package com.mlm09kdev.instagramer.Alert;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.mlm09kdev.instagramer.R;
 import com.mlm09kdev.instagramer.Utils.BottomNavigationViewHelper;
 
 /**
@@ -22,7 +23,7 @@ public class AlertActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_home_layout);
         setupBottomNavigationView();
     }
 

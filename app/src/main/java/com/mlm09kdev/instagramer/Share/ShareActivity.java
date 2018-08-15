@@ -1,4 +1,4 @@
-package com.mlm09kdev.instagramer;
+package com.mlm09kdev.instagramer.Share;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,20 +9,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.mlm09kdev.instagramer.R;
 import com.mlm09kdev.instagramer.Utils.BottomNavigationViewHelper;
 
 /**
  * Created by Manuel Montes de Oca on 8/13/2018.
  */
-public class SearchActivity extends AppCompatActivity{
-    private static final String TAG = "SearchActivity";
-    private Context mContext = SearchActivity.this;
-    private static final int ACTIVITY_NUM = 1;
+public class ShareActivity extends AppCompatActivity{
+    private static final String TAG = "ShareActivity";
+    private Context mContext = ShareActivity.this;
+    private static final int ACTIVITY_NUM = 2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_home_layout);
         setupBottomNavigationView();
     }
 
@@ -34,6 +35,7 @@ public class SearchActivity extends AppCompatActivity{
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+
     }
 }
 
