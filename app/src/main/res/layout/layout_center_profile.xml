@@ -1,0 +1,125 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/profileTopBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <include layout="@layout/snippet_top_profile_bar" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/profileInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileTopBarLayout"
+            android:background="@drawable/white_gray_border_bottom">
+
+            <LinearLayout
+                android:id="@+id/profilePostInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_weight="25">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="2dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="75">
+
+                    <include layout="@layout/snippet_top_profile_info" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilePostInfoLayout"
+                android:orientation="vertical"
+                android:id="@+id/displayInfoLayout"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/displayNameInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="test Name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/displayDescriptionInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Test Description"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/displayWebsiteInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="testWebsite.com"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profilePhotoLayout"
+                android:layout_below="@id/displayInfoLayout"
+                android:layout_marginBottom="50dp">
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ProfileGridView"
+                    android:numColumns="3"
+                    android:verticalSpacing="1dp"
+                    android:horizontalSpacing="1dp"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center">
+
+                </GridView>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</merge>

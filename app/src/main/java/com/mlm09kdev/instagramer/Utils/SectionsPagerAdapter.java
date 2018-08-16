@@ -1,4 +1,4 @@
-package com.mlm09kdev.instagramer.Home;
+package com.mlm09kdev.instagramer.Utils;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

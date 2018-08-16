@@ -1,6 +1,7 @@
 package com.mlm09kdev.instagramer.Profile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.mlm09kdev.instagramer.R;
@@ -21,28 +25,32 @@ public class ProfileActivity extends AppCompatActivity{
     private Context mContext = ProfileActivity.this;
     private static final int ACTIVITY_NUM = 4;
 
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_layout);
+        progressBar = findViewById(R.id.profileProgressBar);
+        progressBar.setVisibility(View.GONE);
         setupToolbar();
-       // setupBottomNavigationView();
+        setupBottomNavigationView();
     }
 
     private void setupToolbar(){
         Toolbar toolbar = findViewById(R.id.profileToolBar);
         setSupportActionBar(toolbar);
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+
+        ImageView profileMenuteView = findViewById(R.id.profileMenu);
+        profileMenuteView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Log.d(TAG, "onMenuItemClick: clicked profile Menu");
-                switch (item.getItemId()){
-                    case R.id.profileMenu:
-                        Log.d(TAG, "onMenuItemClick: Clicked the profile Menu");
-                }
-                return false;
+            public void onClick(View view) {
+                Log.d(TAG, "onClick: navigating to account settings");
+                Intent intent = new Intent(mContext, AccountSettingsActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
     private void setupBottomNavigationView(){
@@ -56,10 +64,5 @@ public class ProfileActivity extends AppCompatActivity{
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.profile_menu, menu);
-        return true;
-    }
 }
 

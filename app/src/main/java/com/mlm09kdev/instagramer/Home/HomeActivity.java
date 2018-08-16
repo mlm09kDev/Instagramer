@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.mlm09kdev.instagramer.R;
 import com.mlm09kdev.instagramer.Utils.BottomNavigationViewHelper;
+import com.mlm09kdev.instagramer.Utils.SectionsPagerAdapter;
 
 public class HomeActivity extends AppCompatActivity {
     private static final String TAG = "HomeActivity";

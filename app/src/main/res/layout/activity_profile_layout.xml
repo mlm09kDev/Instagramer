@@ -4,8 +4,18 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <include layout="@layout/snippet_top_profile_bar"/>
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <include layout="@layout/layout_center_profile"/>
+        <include layout="@layout/layout_bottom_navigation_view"/>
+
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/profileProgressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
